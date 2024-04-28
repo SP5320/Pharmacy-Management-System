@@ -1,0 +1,36 @@
+{% extends 'store/base.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block body %}
+
+<style>
+    body {
+        background-image: url('/static/store/bg2.jpg'); /* Change 'path/to/your/image.jpg' to the actual path of your image */
+            background-size: 100% 100%; /* Adjust as needed */
+            background-repeat: no-repeat; /* Adjust as needed */
+            background-attachment: fixed;
+    }
+</style>
+
+<div class="container-fluid bg-success text-light py-1 text-center">
+    <h1>About Us</h1>
+</div>
+
+<div class="container p-5" style="float: left; width: 40%">
+    <p>
+        This pharmacy management system is designed to carry out basic functions like updating and selling medications to customers, as well as maintaining records of the medications that are kept in stock. 
+        This system makes it possible to maintain complete records of all the information related to medications that are supplied to clients.
+    </p>
+    <h2 class="font-weight-bold mt-3">Made By-</h2>
+    <h5 class="my-3 text-muted">Shubham Pawar</h5>
+    <h5 class="my-3 text-muted">Harsh Chauhan</h5>
+    <h5 class="my-3 text-muted">Rahul Saini</h5>
+
+</div>
+
+<div class="container p-5" style="float: right; width: 60%; height: 100%">
+    <img src="/static/store/about.jpg" style="width: 760px" />
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Delete{% endblock %}
+
+{% block body %}
+
+<style>
+    body {
+        background-image: url('/static/store/bg2.jpg'); /* Change 'path/to/your/image.jpg' to the actual path of your image */
+            background-size: 100% 100%; /* Adjust as needed */
+            background-repeat: no-repeat; /* Adjust as needed */
+            background-attachment: fixed;
+    }
+</style>
+
+<div class="container-fluid bg-success text-light py-1 text-center">
+    <h1>Delete Record</h1>
+</div>
+
+<div class="container1 my-4 mx-150" style="max-width: 900px; margin: auto;">
+    <h4 class="font-weight-bold mt-3 my-3">Are you sure you want to delete '{{rec}}'</h4>
+
+    <form action="{% url 'DeleteRec' rec.Purchase_ID %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger my-2" value="Delete Record">
+        <a href="{% url 'Records' %}" class="btn btn-primary">Back</a>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Sell Medicine{% endblock %}
+
+{% block body %}
+
+<style>
+    body {
+        background-image: url('/static/store/bg2.jpg'); /* Change 'path/to/your/image.jpg' to the actual path of your image */
+            background-size: 100% 100%; /* Adjust as needed */
+            background-repeat: no-repeat; /* Adjust as needed */
+            background-attachment: fixed;
+    }
+</style>
+
+<div class="container-fluid bg-success text-light py-1 text-center">
+    <h1>Sell Medicine</h1>
+</div>
+
+<div class="container1 my-4 mx-150" style="max-width: 900px; margin: auto;">
+    {% load crispy_forms_tags %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-success my-2" value="Sell Medicine">
+        <a href="{% url 'Inventory' %}" class="btn btn-primary">Back</a>
+    </form>
+</div>
+
+{% endblock %}

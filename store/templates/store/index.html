@@ -1,0 +1,63 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Pharmacy Management System{% endblock %}
+
+{% block body %}
+    <div class="container1 my-3" style="max-width: 950px; margin: auto;">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/static/store/img01.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/store/img02.jpg" class="d-block w-100" alt="...">
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <h1 class="bg-success text-light py-1" style="text-align: center;"><b>Pharmacy Management System</b></h1>
+
+    <div class="container my-3">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Inventory</h5>
+                        <p class="card-text">Have a look at the medicines that are in stock.</p>
+                        <a href="{% url 'Inventory' %}" class="btn btn-primary bg-success">Go to Inventory</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Add Medicine</h5>
+                        <p class="card-text">Add a new medicine to your inventory.</p>
+                        <a href="{% url 'AddMedicine' %}" class="btn btn-primary bg-success">Add medicine</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Records</h5>
+                        <p class="card-text">Have a look at the records of medicines which have been sold to customers.</p>
+                        <a href="{% url 'Records' %}" class="btn btn-primary bg-success">Go to Records</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

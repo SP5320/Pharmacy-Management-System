@@ -1,0 +1,64 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Inventory{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        background-image: url('/static/store/bg2.jpg'); /* Change 'path/to/your/image.jpg' to the actual path of your image */
+            background-size: 100% 100%; /* Adjust as needed */
+            background-repeat: no-repeat; /* Adjust as needed */
+            background-attachment: fixed;
+    }
+</style>
+
+
+<div class="container-fluid bg-success text-light py-1 text-center">
+    <h1>Inventory</h1>
+</div>
+
+<div class="container text-center py-4" style="margin: auto;">
+    <form action="" method="GET" >
+        {{ myFilter.form }}
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+</div>
+
+<div class="container row text-center py-4" style="margin: auto;">
+    <div class="col-md-12">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <th>Medicine ID</th>
+                <th>Medicine Name</th>
+                <th>Company_ID</th>
+                <th>Company Name</th>
+                <th>Mfg Date</th>
+                <th>Exp Date</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Sell</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+                {% for i in messages %}
+                    <tr>
+                        <td>{{i.Medicine_ID}}</td>
+                        <td>{{i.Medicine_Name}}</td>
+                        <td>{{i.Company_ID}}</td>
+                        <td>{{i.Company_name}}</td>
+                        <td>{{i.Manufacturing_date}}</td>
+                        <td>{{i.Expiry_date}}</td>
+                        <td>{{i.Price}}</td>
+                        <td>{{i.stock}}</td>
+                        <td><a href="{% url 'SellMedicine' i.Medicine_ID %}" class="btn btn-primary">Sell</a></td>
+                        <td><a href="{% url 'UpdateMed' i.Medicine_ID %}" class="btn btn-warning">Update</a></td>
+                        <td><a href="{% url 'DeleteMed' i.Medicine_ID %}" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
