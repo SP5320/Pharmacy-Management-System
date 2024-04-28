@@ -3,7 +3,7 @@ blinker==1.7.0
 click==8.1.7
 colorama==0.4.6
 crispy-bootstrap4==2024.1
-Django==4.1.5
+Django
 django-crispy-forms==2.1
 django-filter==24.2
 dnspython==2.6.1
