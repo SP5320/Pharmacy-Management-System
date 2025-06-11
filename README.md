@@ -5,6 +5,7 @@ Its main purpose is to help manage **medicine inventory** and track **sales reco
 Users can sign up, log in, add new medicines, view and update inventory stock,
 record medicine sales, and see a history of all transactions, with features for **searching** and **filtering** data.
 
+### Check out the live website here: [Pharmacy Management System](https://shubhampawar.pythonanywhere.com/)
 
 ## Visual Overview
 
